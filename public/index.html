@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parrilla Don Ignacio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome desde CDNJS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papm44VRIb6K0lbmjZ7t9XepV5EwnkaWa6slvRyrc4XNMXRox9uV79AkjZfHcHK7zWYjUlzVm3k8XDm+92+k4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
   <header>
@@ -23,7 +20,6 @@
   </header>
 
   <div id="toast">¡Bienvenido a Parrilla Don Ignacio! 🍖</div>
-
   <p id="clima">☁️ Cargando clima...</p>
 
   <div class="hero-banner" style="background-image: url('img/salon.jpeg');">
@@ -32,7 +28,7 @@
         <p>Sabor auténtico, como en casa</p>
         <a href="#contacto" class="button">Reservá tu mesa</a>
     </div>
-    </div>
+  </div>
 
   <section id="menu">
     <h2 class="section-title" data-aos="fade-up">Nuestro Menú</h2>
@@ -62,7 +58,6 @@
     </p>
   </section>
 
-
   <section id="contacto">
     <h2 class="section-title" data-aos="fade-up">Reservas</h2>
     <p style="text-align:center;" data-aos="fade-up" data-aos-delay="100">
@@ -72,101 +67,84 @@
   </section>
 
   <section id="galeria">
-  <h2 class="section-title" data-aos="fade-up">Nuestra Galería</h2>
-  <div class="galeria-grid">
-    <img src="img/parrillada.jpeg" alt="Plato 1">
-    <img src="img/flan.jpg" alt="Frente del local">
-    <img src="img/cerveza.jpg" alt="Asado" />
-    <!-- Más imágenes -->
-  </div>
+    <h2 class="section-title" data-aos="fade-up">Nuestra Galería</h2>
+    <div class="galeria-grid">
+      <img src="img/parrillada.jpeg" alt="Plato 1">
+      <img src="img/flan.jpg" alt="Frente del local">
+      <img src="img/cerveza.jpg" alt="Asado" />
+    </div>
   </section>
 
   <section id="opiniones">
-  <h2 class="section-title" data-aos="fade-up">Lo que dicen nuestros clientes</h2>
-  <div class="cards">
-    <div class="card">
-      <p>“Excelente atención y comida de primera. ¡Volveremos!”</p>
-      <strong>- Juan C.</strong>
+    <h2 class="section-title" data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+    <div class="cards">
+      <div class="card">
+        <p>“Excelente atención y comida de primera. ¡Volveremos!”</p>
+        <strong>- Juan C.</strong>
+      </div>
+      <div class="card">
+        <p>“El flan casero es una locura. Lugar cálido y familiar.”</p>
+        <strong>- Mariana G.</strong>
+      </div>
     </div>
-    <div class="card">
-      <p>“El flan casero es una locura. Lugar cálido y familiar.”</p>
-      <strong>- Mariana G.</strong>
-    </div>
-  </div>
   </section>
 
-    <section id="mapa">
+  <section id="mapa">
     <h2 class="section-title" data-aos="fade-up">¿Dónde estamos?</h2>
     <div style="max-width: 1000px; margin: auto;">
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13130.717430510405!2d-58.43514979002176!3d-34.582996387650456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb578d8a24855%3A0x9fbe16173a410f91!2sPalermo%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1716130000000"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13130.717430510405!2d-58.43514979002176!3d-34.582996387650456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb578d8a24855%3A0x9fbe16173a410f91!2sPalermo%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1716130000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    </section>
+  </section>
 
+  <!-- FORMULARIO SIMPLIFICADO CON FORMSUBMIT -->
+  <form class="formulario-contacto" action="https://formsubmit.co/juanalgarin00@gmail.com" method="POST">
+    <h2>¡Trabajá con nosotros!</h2>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
+    <input type="hidden" name="_next" value="https://parrilla-don-ignacio.onrender.com/">
+    <input type="text" name="_honey" style="display:none">
+    <button type="submit">Enviar</button>
+  </form>
 
-    <form class="formulario-contacto" action="/upload" method="POST" enctype="multipart/form-data">
-      <h2>¡Trabajá con nosotros!</h2>
+  <button id="scrollTopBtn" title="Subir al inicio">↑</button>
+  <button id="toggleTheme" title="Modo oscuro">🌙</button>
+  <script src="app.js"></script>
 
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
-
-      <label for="cv">Adjuntá tu CV (PDF):</label>
-      <input type="file" name="cv" id="cv" accept=".pdf" required>
-
-      <button type="submit">Enviar</button>
-    </form>
-
-
-    <button id="scrollTopBtn" title="Subir al inicio">↑</button>
-    <button id="toggleTheme" title="Modo oscuro">🌙</button>
-
-    <script src="app.js"></script>
-
-    <footer class="footer">
+  <footer class="footer">
     <div class="footer-container">
-        <div class="footer-col">
+      <div class="footer-col">
         <h3>Parrilla Don Ignacio</h3>
         <p>Sabor auténtico desde 1995.<br> Palermo, CABA</p>
-        </div>
-        <div class="footer-col">
+      </div>
+      <div class="footer-col">
         <h4>Enlaces</h4>
         <ul>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#contacto">Reservas</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Reservas</a></li>
         </ul>
-        </div>
-        <div class="footer-col">
+      </div>
+      <div class="footer-col">
         <h4>Seguinos</h4>
         <div class="footer-social">
-            <ul>
-                <li><a href="https://www.instagram.com/restaurantelabrigada/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/donjulioasador/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li></li>
-            </ul>
+          <ul>
+            <li><a href="https://www.instagram.com/restaurantelabrigada/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/donjulioasador/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          </ul>
         </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2025 Parrilla Don Ignacio | Todos los derechos reservados</p>
+      <p>&copy; 2025 Parrilla Don Ignacio | Todos los derechos reservados</p>
     </div>
-    </footer>
+  </footer>
 
-    <div class="footer-col">
-
-
-    <a href="https://wa.me/541123456789" class="whatsapp" target="_blank">
+  <a href="https://wa.me/541123456789" class="whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-    </a>
+  </a>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-
-
-
 </body>
 </html>
