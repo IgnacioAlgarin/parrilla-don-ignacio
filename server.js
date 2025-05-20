@@ -2,18 +2,13 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
-// Servir archivos estáticos desde la carpeta public
-app.use(express.static(path.join(__dirname, "public")));
+// Servir archivos estáticos
+app.use(express.static("public"));
 
-// Servir archivos subidos
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Middleware para formularios
-app.use(express.urlencoded({ extended: true }));
-
-// Configuración de Multer para subir PDFs
+// Configuración de multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"),
   filename: (req, file, cb) =>
@@ -43,17 +38,7 @@ app.post("/upload", upload.single("cv"), (req, res) => {
   console.log("Mensaje:", mensaje);
   console.log("Archivo:", archivo.path);
 
-  res.send(`
-    <script>
-      alert("✅ PDF '${archivo.originalname}' cargado correctamente.");
-      window.location.href = "/";
-    </script>
-  `);
-});
-
-// Fallback: si no encuentra ruta, manda al index
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.send("✅ Tu CV fue recibido correctamente.");
 });
 
 app.listen(PORT, () => {
