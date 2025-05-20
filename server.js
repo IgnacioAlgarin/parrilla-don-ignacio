@@ -5,7 +5,8 @@ const app = express();
 const PORT = 3000;
 
 // Servir archivos estáticos
-app.use(express.static("public"));
+//app.use(express.static("public"));
+app.use('/uploads', express.static('uploads'));
 
 // Configuración de multer
 const storage = multer.diskStorage({
